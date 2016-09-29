@@ -1,26 +1,4 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
-
-/*
-$("#main").append(["Leo Govan"]);
-
-
-var awesomeThoughts = "I am Leo Govan and I am AWESOME";
-
-console.log(awesomeThoughts);
-
-var email = "leogovan@yahoo.co.uk";
-var newEmail = email.replace("yahoo.co.uk", "googlemail.com");
-console.log(email);
-console.log(newEmail);
-
-
-var funThoughts = awesomeThoughts.replace("AWESOME", "FUN");
-$("#main").append([funThoughts]);
-*/
-
-// Main header
+/* Example left behind
 
 var name = "Leo Govan";
 var role = "Web Developer";
@@ -29,34 +7,7 @@ var formattedRole = HTMLheaderRole.replace("%data%", role);
 
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
-
-
-// bio and contacts
-
-var bio = {
-  "name" : "Leo",
-  "role" : "Front-End Developer",
-  "contacts" : {
-    "mobile" : "012345678",
-    "email" : "bungleberry@yahoo.com",
-    "twitter" : "@twitty_twitter",
-    "github" : "ding-dong",
-    "location" : "Londonshire, Englandham"
-  },
-  "welcomeMessage" : "Welcome to my CV!",
-  "bioPic" : "images/me.jpg",
-  "skills" : ["HTML", "CSS", "Javascript", "Python", "Git"]
-};
-
-var formattedPicture = HTMLbioPic.replace("%data%", bio.bioPic);
-var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-var formattedSkills = HTMLskills.replace("%data%", bio.skills);
-var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-
-$("#header").append(formattedLocation);
-$("#header").append(formattedWelcome);
-$("#header").append(formattedPicture);
-$("#header").append(formattedSkills);
+*/
 
 // Work
 
@@ -76,23 +27,72 @@ var work = {
   }]
 };
 
-work.position = "Project Manager";
-work.employer = "PFS";
-work.years = 3;
-work.city = "Londonshire";
+// Projects
 
-var formattedWorkPosition = HTMLprojectTitle.replace("%data%", work.position);
+var projects = {
+  "projects" : [{
+    "title" : "Portfolio Page",
+    "dates" : 2016,
+    "description" : "",
+    "images" : [""]
+  },{
+    "title" : "Online Resume",
+    "dates" : 2016,
+    "description" : "",
+    "images" : [""]
+  }]
+};
 
-$("#main").append(formattedWorkPosition);
+// Bio
+
+var bio = {
+  "name" : "Leo Govan",
+  "role" : "Front-End Developer",
+  "welcomeMessage" : "Welcome to my CV!",
+  "bioPic" : "images/me.jpg",
+  "contacts" : {
+    "mobile" : "012345678",
+    "email" : "leogovan@yahoo.co.uk",
+    "twitter" : "@fit_adventure",
+    "github" : "leogovan",
+    "location" : "London, England"
+  },
+  "skills" : ["HTML", "CSS", "Javascript", "Python", "Git"]
+};
+/*
+var formattedPicture = HTMLbioPic.replace("%data%", bio.bioPic);
+var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+var formattedSkills = HTMLskills.replace("%data%", bio.skills);
+var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+
+$("#header").append(formattedLocation);
+$("#header").append(formattedWelcome);
+$("#header").append(formattedPicture);
+$("#header").append(formattedSkills);
+*/
 
 // Education
 
-var education = {};
-
-education["name"] = "Brunel University";
-education["years"] = "2009";
-education["city"] = "Uxbridge";
-
-var formattedSchoolName = HTMLschoolName.replace("%data%", education.name);
-
-$("#main").append(formattedSchoolName);
+var education = {
+  "schools": [{
+		"name": "Manchester University",
+		"location": "Manchester, England",
+		"degree": "BA(Hons)",
+		"majors": ["Commercial Music Production"],
+		"years": "2001-2003",
+		"url": "http://www.manchester.ac.uk/"
+	}, {
+		"name": "Brunel University",
+		"location": "Uxbridge, England",
+		"degree": "Post Graduate Certificate",
+		"major": ["Intellectual Property Law"],
+		"years": "2006-2007",
+		"url": "http://www.brunel.ac.uk/"
+	}],
+	"onlineCourses": [{
+		"title": "Front-End Nanodegree",
+		"school": "Udacity",
+		"dates": 2016,
+		"url": "https://www.udacity.com/"
+	}]
+};
