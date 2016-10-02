@@ -118,7 +118,8 @@ if (bio.skills.length > 0) {
     $("#skills").append(formattedSkill);
 }
 
-// Loops over my jobs in work object and appends to HTMLworkStart
+// Loops over my jobs arrays in work object and outputs employer and title
+
 
 for (var job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
@@ -126,3 +127,11 @@ for (var job in work.jobs) {
     var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
     $(".work-entry:last").append(formattedEmployer + formattedTitle);
 }
+
+// Loops through jobs array and outputs dates and details
+
+work.jobs.forEach(function(job) {
+    if (work.jobs.length > 0);
+    var formattedDates = HTMLworkDates.replace("%data%", work.jobs.dates);
+    $(".work-entry:last").append(formattedDates);
+});
