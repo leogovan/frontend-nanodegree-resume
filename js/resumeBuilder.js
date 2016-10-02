@@ -120,7 +120,6 @@ if (bio.skills.length > 0) {
 
 // Loops over my jobs arrays in work object and outputs employer and title
 
-
 for (var job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
     var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -131,7 +130,6 @@ for (var job in work.jobs) {
 // Loops through jobs array and outputs dates and details
 
 work.jobs.forEach(function(job) {
-    if (work.jobs.length > 0);
     var formattedDates = HTMLworkDates.replace("%data%", work.jobs.dates);
     $(".work-entry:last").append(formattedDates);
     var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs.description);
