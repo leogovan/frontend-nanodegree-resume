@@ -134,4 +134,6 @@ work.jobs.forEach(function(job) {
     if (work.jobs.length > 0);
     var formattedDates = HTMLworkDates.replace("%data%", work.jobs.dates);
     $(".work-entry:last").append(formattedDates);
+    var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs.description);
+    $(".work-entry:last").append(formattedDescription);
 });
