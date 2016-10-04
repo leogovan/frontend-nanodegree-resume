@@ -33,13 +33,13 @@ var projects = {
     "projects": [{
         "title": "Portfolio Page",
         "dates": 2016,
-        "description": "",
+        "description": "A portfolio page.",
         "images": [""]
     }, {
         "title": "Online Resume",
         "dates": 2016,
-        "description": "",
-        "images": [""]
+        "description": "This online resume.",
+        "images": ["images/Resume-small.jpg"]
     }]
 };
 
@@ -102,6 +102,11 @@ var education = {
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").append(formattedName);
 
+// Adds the piture
+
+var formattedPicture = HTMLbioPic.replace("%data%", bio.bioPic);
+$("#header").append(formattedPicture);
+
 // Check for skills in bio
 
 if (bio.skills.length > 0) {
@@ -119,19 +124,81 @@ if (bio.skills.length > 0) {
 }
 
 // Loops over my jobs arrays in work object and outputs employer and title
-
+/*
 for (var job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
     var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
     var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
     $(".work-entry:last").append(formattedEmployer + formattedTitle);
+    var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+    $(".work-entry:last").append(formattedDates);
+    var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+    $(".work-entry:last").append(formattedDescription);
 }
-
+*/
 // Loops through jobs array and outputs dates and details
 
-work.jobs.forEach(function(job) {
-    var formattedDates = HTMLworkDates.replace("%data%", work.jobs.dates);
-    $(".work-entry:last").append(formattedDates);
-    var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs.description);
-    $(".work-entry:last").append(formattedDescription);
+
+var displayWork = function() {
+    work.jobs.forEach(function(job) {
+        $("#workExperience").append(HTMLworkStart);
+        var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
+        var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
+        $(".work-entry:last").append(formattedEmployer + formattedTitle);
+        var formattedDates = HTMLworkDates.replace("%data%", job.dates);
+        $(".work-entry:last").append(formattedDates);
+        var formattedDescription = HTMLworkDescription.replace("%data%", job.description);
+        $(".work-entry:last").append(formattedDescription);
+    });
+};
+
+displayWork();
+
+// Collects click locations
+
+$(document).click(function(loc) {
+    var x = loc.pageX;
+    var y = loc.pageY;
+
+    logClicks(x, y);
 });
+
+// Internationalize button and name change function
+
+$("#main").append(internationalizeButton);
+
+var inName = function(oldName) {
+    oldName = oldName.split(" ");
+    var firstName = oldName[0];
+    var lastName = oldName[1];
+    firstName = firstName.charAt(0).toUpperCase() + firstName.substring(1).toLowerCase();
+    lastName = lastName.substring(0).toUpperCase();
+    var newName = firstName + " " + lastName;
+    return newName;
+};
+
+// Display projects function
+
+projects.display = function () {
+  projects.projects.forEach(function(project) {
+      $("#projects").append(HTMLprojectStart);
+
+      var formattedTitle = HTMLprojectTitle.replace("%data%", project.title);
+      $(".project-entry:last").append(formattedTitle);
+
+      var formattedDates = HTMLprojectDates.replace("%data%", project.dates);
+      $(".project-entry:last").append(formattedDates);
+
+      var formattedDescription = HTMLprojectDescription.replace("%data%", project.description);
+      $(".project-entry:last").append(formattedDescription);
+
+      if (projects.images.length > 0) { //check that number of images is > 0
+      projects.projects.forEach(function(project){
+          var formattedImage = HTMLprojectImage.replace("%data%", project.image);
+          $(".project-entry:last").append(formattedImage);
+        });
+      }
+  });
+};
+
+projects.display();
