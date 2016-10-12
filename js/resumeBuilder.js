@@ -153,7 +153,7 @@ var education = {
         "name": "Manchester University",
         "location": "Manchester, England",
         "degree": "BA(Hons)",
-        "majors": ["Commercial Music Production"],
+        "majors": ["Commercial Music Production", "Something Else"],
         "dates": "2001-2003",
         "url": "http://www.manchester.ac.uk/"
     }, {
