@@ -12,7 +12,7 @@ var bio = {
     },
     "welcomeMessage": "Welcome to my CV!",
     "skills": ["HTML", "CSS", "Javascript", "Python", "Git"],
-    "bioPic": "images/me.jpg"
+    "biopic": "images/me.jpg"
 };
 
 // Display bio as encapsulated function:
@@ -28,7 +28,7 @@ bio.display = function() {
     $("#header").append(formattedRole);
 
     // Adds picture
-    var formattedPicture = HTMLbioPic.replace("%data%", bio.bioPic);
+    var formattedPicture = HTMLbiopic.replace("%data%", bio.biopic);
     $("#header").append(formattedPicture);
 
     // Adds welcome message
