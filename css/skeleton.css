@@ -230,15 +230,21 @@ h6 {
     letter-spacing: 0;
 }
 
+@media (max-width: 560px) {
+    h2 {
+        font-size: 2.2rem;
+    }
+  }
+
 
 /* Larger than phablet */
 
-@media (min-width: 550px) {
+@media (min-width: 561px) {
     h1 {
         font-size: 5.0rem;
     }
     h2 {
-        font-size: 4.2rem;
+        font-size: 3.2rem;
     }
     h3 {
         font-size: 3.6rem;
