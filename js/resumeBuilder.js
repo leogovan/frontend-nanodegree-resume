@@ -2,7 +2,7 @@
 
 var bio = {
     "name": "Leo Govan",
-    "role": "Front-End Developer",
+    "role": "Developer",
     "contacts": {
         "mobile": "012345678",
         "email": "leogovan@yahoo.co.uk",
@@ -153,14 +153,14 @@ var education = {
         "name": "Manchester University",
         "location": "Manchester, England",
         "degree": "BA(Hons)",
-        "majors": ["Commercial Music Production", "Something Else"],
+        "majors": ["Commercial Music Production"],
         "dates": "2001-2003",
         "url": "http://www.manchester.ac.uk/"
     }, {
         "name": "Brunel University",
         "location": "Uxbridge, England",
         "degree": "Post Graduate Certificate",
-        "major": ["Intellectual Property Law"],
+        "majors": ["Intellectual Property Law"],
         "dates": "2006-2007",
         "url": "http://www.brunel.ac.uk/"
     }],
@@ -213,7 +213,7 @@ $(document).click(function(loc) {
 
 // Internationalise button and name change function
 
-$("#main").append(internationalizeButton);
+$("#topContacts").append(internationalizeButton);
 
 var inName = function(oldName) {
     oldName = oldName.split(" ");
