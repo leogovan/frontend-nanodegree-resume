@@ -50,7 +50,7 @@ bio.display = function() {
     $("#topContacts, #footerContacts").append(formattedTwitter);
 
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-    $("#topContacts, #footerContacts").append(formattedLocation);
+    $("#topContacts, #footerContacts  ").append(formattedLocation);
 
     if (bio.skills.length > 0) { // Use the project item and check for > 0
         $("#header").append(HTMLskillsStart);
@@ -92,6 +92,8 @@ work.display = function() {
         var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
         var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
         $(".work-entry:last").append(formattedEmployer + formattedTitle);
+        var formattedLocation = HTMLworkLocation.replace("%data%", job.location);
+        $(".work-entry:last").append(formattedLocation);
         var formattedDates = HTMLworkDates.replace("%data%", job.dates);
         $(".work-entry:last").append(formattedDates);
         var formattedDescription = HTMLworkDescription.replace("%data%", job.description);
@@ -107,12 +109,12 @@ work.display();
 var projects = {
     "projects": [{
         "title": "Portfolio Page",
-        "dates": 2016,
+        "dates": "2016",
         "description": "A portfolio page that I built for my first Udacity front-end project. This is an example of using HTML, CSS and leveraging some built-in JavaScript components via bootstrap.",
         "images": ["images/portfolio-page-small.png", "images/portfolio-page-modal-small.png"]
     }, {
         "title": "Online Resume",
-        "dates": 2016,
+        "dates": "2016",
         "description": "This online resume.",
         "images": ["images/Resume-small.jpg"]
     }]
