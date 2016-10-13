@@ -38,19 +38,19 @@ bio.display = function() {
 
     // Adds contacts
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-    $("#topContacts").append(formattedMobile);
+    $("#topContacts, #footerContacts").append(formattedMobile);
 
     var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-    $("#topContacts").append(formattedEmail);
+    $("#topContacts, #footerContacts").append(formattedEmail);
 
     var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-    $("#topContacts").append(formattedGithub);
+    $("#topContacts, #footerContacts").append(formattedGithub);
 
     var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-    $("#topContacts").append(formattedTwitter);
+    $("#topContacts, #footerContacts").append(formattedTwitter);
 
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-    $("#topContacts").append(formattedLocation);
+    $("#topContacts, #footerContacts").append(formattedLocation);
 
     if (bio.skills.length > 0) { // Use the project item and check for > 0
         $("#header").append(HTMLskillsStart);
