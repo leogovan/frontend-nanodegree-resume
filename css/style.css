@@ -20,7 +20,7 @@ h6 {
     overflow: auto;
 }
 
-.education-entry, .work-entry, .project-entry {
+.education-entry, .work-entry, .project-entry, #online-entry {
     padding: 0 5%;
 }
 
@@ -73,6 +73,13 @@ h2, h3, h4, h5 {
     float: right;
 }
 
+.major-text {
+  margin-top: 20px;
+}
+
+#online-title {
+  margin-top: 20px;
+}
 
 /*
 p {

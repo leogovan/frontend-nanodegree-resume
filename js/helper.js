@@ -44,13 +44,14 @@ var HTMLschoolName = '<a href="#">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+var HTMLschoolMajor = '<div class="major-text"><em>Major: %data%</em></div>';
 
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
+//var HTMLonlineStart = '<div class="online-entry"></div>';
+var HTMLonlineClasses = '<div id="online"><h3>Online Classes</h3><div id="online-entry"></div></div>';
 var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a>';
+var HTMLonlineURL = '<a href="#" id="online-title">%data%</a>';
 
 var internationalizeButton = '<button>Internationalise my name!</button>';
 var googleMap = '<div id="map"></div>';
